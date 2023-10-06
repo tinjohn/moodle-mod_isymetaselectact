@@ -1,5 +1,5 @@
 # moodle-mod_isymetaselectact
-the activity for the block ISy Metaselect to embed course recommendations into courses
+the activity for the ISy Metaselect block to include course recommendations in courses
 ## Actual features
 - courses by search term 
 ## Planned features
