@@ -54,7 +54,7 @@ class mod_isymetaselectact_mod_form extends moodleform_mod {
         $attributes['rows'] = 5;
         $element->setAttributes($attributes);
         //-------------------------------------------------------
-        $mform->addElement('text', 'coursedesc', get_string('coursedesc'), array('size'=>'48'));
+        $mform->addElement('text', 'coursedesc', get_string('coursedesc','isymetaselectact'), array('size'=>'48'));
         $mform->addHelpButton('coursedesc', 'coursedesc', 'isymetaselectact');
         if (!empty($CFG->formatstringstriptags)) {
             $mform->setType('coursedesc', PARAM_TEXT);

@@ -27,6 +27,7 @@ $string['contentheader'] = 'Content';
 $string['createisymetaselectact'] = 'Create an ISy Course Overview Activity ';
 
 $string['coursedesc'] = 'Search term';
+$string['coursedesc_help'] = 'Type in the search term that corresponds to the courses that you want to be displayed.';
 
 $string['indicator:cognitivedepth'] = 'ISy Course Overview Activity cognitive';
 $string['indicator:cognitivedepth_help'] = 'This indicator is based on the cognitive depth reached by the student in a ISy Course Overview Activity resource.';
