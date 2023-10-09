@@ -69,7 +69,7 @@ class mod_isymetaselectact_mod_form extends moodleform_mod {
         $mform->addRule('coursedesc', get_string('maximumchars', '', 255), 'maxlength', 255, 'client');
 
         // Entweder oder
-        $mform->addElement('static','hinteitheror',get_string('hintneithernor','isymetaselectact'));
+        $mform->addElement('static','hinteitheror',get_string('hinteitheror','isymetaselectact'));
         // Von ildmetasselect
         // Meta select form
         $data = new stdClass();
