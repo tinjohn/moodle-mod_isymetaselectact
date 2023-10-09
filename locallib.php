@@ -24,5 +24,37 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die;
 
+//require_once("../../config.php");
 
+ // Load the necessary files and classes from the "ildmetaselect" block
+ require_once($CFG->dirroot . '/blocks/ildmetaselect/get_metacourses.php'); // Adjust the path as needed
+ require_once($CFG->dirroot . '/blocks/ildmetaselect/locallib.php'); // Adjust the path as needed
+   
+function get_content($cm,$context) {
+    global $DB;
+
+    // Retrieve the course description for query from the database
+    $coursedesc = $DB->get_field('isymetaselectact', 'coursedesc', array('id' => $cm->instance));
+    if($coursedesc != "") {
+        $records = llsearchterm($coursedesc);
+    } else {
+        $data = $DB->get_record('isymetaselectact', array('id' => $cm->instance));
+    
+        // $data = new stdClass();
+        //         $data->subjectarea = $DB->get_field('isymetaselectact', 'subjectarea', array('id' => $cm->instance));
+        //         $data->provider = 0;
+        //         $data->courselanguage = 0;
+        //         $data->processingtime = "-";
+        //         $data->starttime = "-";
+        $records = get_courses_records($data);    
+    }
+
+    $content = '';
+    // Display the course description text
+    $content .= '<div class="coursedesc">';
+    $content .= get_metacourses($records,$context);
+    $content .= '</div>';
+    return $content;
+}  
