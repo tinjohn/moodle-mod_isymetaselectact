@@ -2,7 +2,7 @@
 the activity for the ISy Metaselect block to include course recommendations in courses
 ## Actual features
 - courses by search term 
-- courses by other options ISy Metaselect offers MISSES BACKUP - work in progress
+- courses by other options ISy Metaselect offers
 
 
 ## Requirements
