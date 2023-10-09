@@ -24,49 +24,27 @@
  */
 
 
- require_once("../../config.php");
- require_once("lib.php");
- require_once("locallib.php");
-  // Load the necessary files and classes from the "ildmetaselect" block
-require_once($CFG->dirroot . '/blocks/ildmetaselect/get_metacourses.php'); // Adjust the path as needed
-require_once($CFG->dirroot . '/blocks/ildmetaselect/locallib.php'); // Adjust the path as needed
-
+require_once("../../config.php");
+require_once("lib.php");
+require_once("locallib.php");
  
- $cmid = required_param('id', PARAM_INT); // Course Module ID
- $cm = get_coursemodule_from_id('isymetaselectact', $cmid, 0, false, MUST_EXIST);
- $course = $DB->get_record('course', array('id' => $cm->course), '*', MUST_EXIST);
- 
- require_course_login($course, true, $cm);
- // Define the page context
- $context = context_module::instance($cm->id);
- 
-  // Set up the page header
-  $PAGE->set_url('/mod/isymetaselectact/view.php', array('id' => $cm->id));
-  $PAGE->set_title(format_string($cm->name));
-  $PAGE->set_heading(format_string($course->fullname));
-  //$PAGE->set_pagelayout('embedded');
+$cmid = required_param('id', PARAM_INT); // Course Module ID
+$cm = get_coursemodule_from_id('isymetaselectact', $cmid, 0, false, MUST_EXIST);
+$course = $DB->get_record('course', array('id' => $cm->course), '*', MUST_EXIST);
 
- // Retrieve the course description for query from the database
- $coursedesc = $DB->get_field('isymetaselectact', 'coursedesc', array('id' => $cm->instance));
-  
-// $data = new stdClass();
-//         $data->subjectarea = 0;
-//         $data->provider = 0;
-//         $data->courselanguage = 0;
-//         $data->processingtime = "-";
-//         $data->starttime = "-";
-// $records = get_courses_records($data);
-$records = llsearchterm($coursedesc);
-$content = '';
- // Display the course description text
-$content .= '<div class="coursedesc">';
-$content .= get_metacourses($records,$context);
-$content .= '</div>';
+require_course_login($course, true, $cm);
+// Define the page context
+$context = context_module::instance($cm->id);
 
+// Set up the page header
+$PAGE->set_url('/mod/isymetaselectact/view.php', array('id' => $cm->id));
+$PAGE->set_title(format_string($cm->name));
+$PAGE->set_heading(format_string($course->fullname));
+//$PAGE->set_pagelayout('embedded'); 
  
 // Output starts here
 echo $OUTPUT->header();
-echo $content;
+echo get_content($cm,$context);
 // Output ends here
 echo $OUTPUT->footer();
  

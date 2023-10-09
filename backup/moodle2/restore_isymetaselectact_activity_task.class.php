@@ -54,7 +54,7 @@ class restore_isymetaselectact_activity_task extends restore_activity_task {
     static public function define_decode_contents() {
         $contents = array();
 
-        $contents[] = new restore_decode_content('isymetaselectact', array('intro', 'coursedesc'), 'isymetaselectact');
+        $contents[] = new restore_decode_content('isymetaselectact', array('intro'), 'isymetaselectact');
 
         return $contents;
     }

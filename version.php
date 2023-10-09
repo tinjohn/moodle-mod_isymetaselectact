@@ -24,10 +24,11 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2023093002;       // The current module version (Date: YYYYMMDDXX).
+$plugin->version   = 2023100900;       // The current module version (Date: YYYYMMDDXX).
 $plugin->requires  = 2022111800;    // Requires this Moodle version.
 $plugin->component = 'mod_isymetaselectact';        // Full name of the plugin (used for diagnostics)
 // $plugin->cron      = 0;
 $plugin->dependencies = array(
-    'local_ildmeta' => ANY_VERSION
+    'local_ildmeta' => ANY_VERSION,
+    'block_ildmetaselect' => 20230100700
 );

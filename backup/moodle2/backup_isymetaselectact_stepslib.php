@@ -37,8 +37,8 @@ class backup_isymetaselectact_activity_structure_step extends backup_activity_st
         // Define each element separated
         $isymetaselectact = new backup_nested_element('isymetaselectact', array('id'), array(
             'name', 'intro', 'introformat', 'coursedesc',
+            'subjectarea','provider','courselanguage','processingtime','starttime',
             'display','timemodified'));
-
 
         // Build the tree
         //nothing here for isymetaselectacts

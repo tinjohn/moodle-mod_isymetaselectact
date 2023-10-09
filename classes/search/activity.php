@@ -33,33 +33,14 @@ defined('MOODLE_INTERNAL') || die();
  * @copyright 2023 Tina John <tina.john@th-luebeck.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
+/**
+ * Search area for mod_customcert activities.
+ *
+ * @package    mod_customcert
+ * @copyright  2016 Mark Nelson <markn@moodle.com>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class activity extends \core_search\base_activity {
 
-    /**
-     * Returns true if this area uses file indexing.
-     *
-     * @return bool
-     */
-    public function uses_file_indexing() {
-        return true;
-    }
-
-    /**
-     * Returns the document associated with this activity.
-     *
-     * Overwrites base_activity to add the provided URL as description.
-     *
-     * @param stdClass $record
-     * @param array    $options
-     * @return \core_search\document
-     */
-    public function get_document($record, $options = array()) {
-        $doc = parent::get_document($record, $options);
-        if (!$doc) {
-            return false;
-        }
-
-        $doc->set('description1', $record->externalurl);
-        return $doc;
-    }
 }

@@ -2,8 +2,8 @@
 the activity for the ISy Metaselect block to include course recommendations in courses
 ## Actual features
 - courses by search term 
-## Planned features
-- courses by other options ISy Metaselect offers 
+- courses by other options ISy Metaselect offers
+
 
 ## Requirements
 ISy Metaselect [moodle-block_isymetaselect](https://github.com/ild-thl/moodle-block_isymetaselect)

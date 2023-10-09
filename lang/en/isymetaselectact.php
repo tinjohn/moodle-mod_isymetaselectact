@@ -46,6 +46,7 @@ $string['modulename_link'] = 'mod/isymetaselectact/view';
 $string['modulenameplural'] = 'ISy Course Overview Activities';
 $string['name'] = 'Name';
 $string['name_help'] = 'The name for the activity and the ISy Course Overview Activity filter';
+$string['hinteitheror'] = 'Either search term or parameters below!';
 $string['page-mod-isymetaselectact-x'] = 'Any ISy Course Overview Activity module page';
 $string['pluginadministration'] = 'Isy Course View Activity module administration';
 $string['pluginname'] = 'ISy Course Overview Activity';
