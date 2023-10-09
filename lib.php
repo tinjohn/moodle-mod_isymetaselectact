@@ -100,6 +100,14 @@ function isymetaselectact_add_instance($data, $mform) {
     require_once($CFG->dirroot.'/mod/isymetaselectact/locallib.php');
 
     $data->coursedesc = $data->coursedesc;
+    // müssten dazukommen
+    // $data->courselanguage = optional_param('courselanguage', 1, PARAM_INT);
+    // $data->subjectarea = optional_param('subjectarea', 1, PARAM_INT);
+    // $data->provider = optional_param('provider', 1, PARAM_INT);
+    // $data->processingtime = optional_param('processingtime', "all", PARAM_TEXT);
+    // $data->starttime = optional_param('starttime', "all", PARAM_TEXT);
+
+
 
     $data->timemodified = time();
     $data->id = $DB->insert_record('isymetaselectact', $data);
