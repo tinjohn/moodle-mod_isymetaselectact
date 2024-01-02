@@ -17,8 +17,8 @@
  * The module resizes the iframe containing the embedded question to be
  * just the right size for the question.
  *
- * @module    filter_embedquestion/question
- * @package   filter_embedquestion
+ * @module    mod_isymetaselect
+ * @package   mod_isymetaselect
  * @copyright 2023 Tina John <tina.john@th-luebeck.de>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -56,9 +56,9 @@ define([], function() {
             document.documentElement.style.height = 'auto';
 
             // Make the edit question link (if present) open in the full window.
-            document.querySelectorAll('.editquestion a').forEach(function(element) {
+            document.querySelectorAll('.metatile a').forEach(function(element) {
                 if (!element.hasAttribute('target')) {
-                    element.setAttribute('target', '_top');
+                    element.setAttribute('target', '_parent');
                 }
             });
 
