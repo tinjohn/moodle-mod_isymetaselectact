@@ -19,7 +19,7 @@
  * Mandatory public API of isymetaselectact module
  *
  * @package    mod_isymetaselectact
- * @copyright 2023 Tina John <tina.john@th-luebeck.de>
+ * @copyright  2023 Tina John <tina.john@th-luebeck.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
